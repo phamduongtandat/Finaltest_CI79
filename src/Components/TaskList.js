@@ -5,7 +5,7 @@ import TaskItem from './TaskItem';
 function TaskList() {
     const { tasks } = useContext(Context)
     return (
-        <div style={{ marginLeft: '35%', }}>
+        <div >
             <ul className="list-unstyled" >
                 {tasks.map((task, i) => (
                     <TaskItem job={task} key={i} />

@@ -1,9 +1,12 @@
 import React from 'react'
+import TaskList from '../Components/TaskList';
+import Input from './../Components/Input';
 
 function ActivePage() {
     return (
         <div>
-            ActivePage
+            <Input />
+            <TaskList />
         </div>
     )
 }

@@ -14,9 +14,14 @@ const ContextProvider = ({ children }) => {
   const [input, setInput] = useState('');
 
   const handleAdd = () => {
-    localStorage.setItem('tasksStorage', JSON.stringify([...tasks, input]))
-    setTasks([...tasks, input])
-    setInput('')
+    if (input.length > 0) {
+      localStorage.setItem('tasksStorage', JSON.stringify([...tasks, input]))
+      setTasks([...tasks, input])
+      setInput('')
+    } else {
+      alert('Bạn phải nhập công việc')
+    }
+
   }
   const handleRemove = (job) => {
     let index = tasks.findIndex(x => x === job)
